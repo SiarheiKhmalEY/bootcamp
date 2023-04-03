@@ -1,10 +1,9 @@
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 public class DecileStatistics {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int[] nums = new int[1000];
+        List<Integer> nums = new ArrayList<>();
         int count = 0;
 
         while (scanner.hasNextInt() && count < 1000) {
@@ -13,21 +12,23 @@ public class DecileStatistics {
                 System.out.println("Invalid input: number must be between 1 and 1000");
                 continue;
             }
-            nums[count] = num;
+
+            nums.add(num);
             count++;
         }
 
-        Arrays.sort(nums, 0, count);
-        int decile3 = nums[count * 3 / 10];
-        int decile6 = nums[count * 6 / 10];
+        Collections.sort(nums);
+        int decile3 = nums.get(count * 3 / 10);
+        int decile6 = nums.get(count * 6 / 10);
 
         int count3 = 0;
         int count6 = 0;
+
         for (int i = 0; i < count; i++) {
-            if (nums[i] <= decile3) {
+            if (nums.get(i) <= decile3) {
                 count3++;
             }
-            if (nums[i] <= decile6) {
+            if (nums.get(i) <= decile6) {
                 count6++;
             }
         }
