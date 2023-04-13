@@ -1,19 +1,18 @@
-
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.StringWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Main {
-    private static final String INPUT = "sample-text-fil2e.txt";
+    private static final String INPUT = "sample-text-file.txt";
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) {
@@ -35,12 +34,7 @@ public class Main {
                 stringList.add(bufferedReader.readLine());
             }
         } catch (IOException e) {
-            StringWriter sw = new StringWriter();
-            e.printStackTrace(new PrintWriter(sw));
-
-            logger.error("Can not read file from path " + path);
-            logger.error(sw.toString());
-
+            logger.error("Can not read file from path " + path, e);
             throw new IllegalStateException();
         }
         logger.warn("Reading data finished");
