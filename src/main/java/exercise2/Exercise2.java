@@ -1,15 +1,17 @@
+package exercise2;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.*;
 
-public class DecileStatistics {
-    private static final Logger logger = LoggerFactory.getLogger(DecileStatistics.class);
+public class Exercise2 {
+    private static final Logger logger = LoggerFactory.getLogger(Exercise2.class);
 
     public static void main(String[] args) {
         logger.warn("Application started");
 
-        DecileStatistics decileStatistics = new DecileStatistics();
+        Exercise2 decileStatistics = new Exercise2();
         Map<List<Integer>, Integer> inputData = decileStatistics.getData();
         List<Decile> deciles = decileStatistics.calculate6thAnd3rdDeciles(inputData);
         decileStatistics.showResult(deciles);

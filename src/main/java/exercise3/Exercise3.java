@@ -1,3 +1,5 @@
+package exercise3;
+
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 import java.util.*;
@@ -14,7 +16,7 @@ public class Exercise3 {
         customAnnotationList.add(Private.class);
         customAnnotationList.add(Public.class);
 
-        Exercise3 main = new Main();
+        Exercise3 main = new Exercise3();
 
         main.getAllClassesWithAnnotation(ScanMe.class, myObjectsToScan);
 

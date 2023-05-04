@@ -1,23 +1,26 @@
+package exercise3;
+
+import exercise3.MyInterface;
+import exercise3.Private;
+import exercise3.Public;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
 
-@ScanMe
-public class FirstClassImpl implements MyInterface{
+public class ThirdClassImpl implements MyInterface {
+
     @Private
     @Override
     public String getId() {
-        return null;
+        return "";
     }
 
-    @Public
     @Override
     public Integer sum(Integer a, Integer b) {
         return null;
     }
 
-    @Private
-    @Public
     @Override
     public Double divide(Double a, Double B) throws Exception {
         return null;
@@ -28,6 +31,8 @@ public class FirstClassImpl implements MyInterface{
         return null;
     }
 
+    @Private
+    @Public
     @Override
     public LocalTime avaysAdd3Hours(LocalDate inDate) {
         return null;
@@ -38,6 +43,7 @@ public class FirstClassImpl implements MyInterface{
 
     }
 
+    @Public
     @Override
     public void someMethodWithoutDataButHaveVariableNumbersOfArguments(String... varArgs) {
 

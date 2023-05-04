@@ -1,3 +1,5 @@
+package exercise1;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,14 +13,14 @@ import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Main {
+public class Exercise1 {
     private static final String INPUT = "sample-text-file.txt";
-    private static final Logger logger = LoggerFactory.getLogger(Main.class);
+    private static final Logger logger = LoggerFactory.getLogger(Exercise1.class);
 
     public static void main(String[] args) {
         logger.warn("Application started");
 
-        Main main = new Main();
+        Exercise1 main = new Exercise1();
         List<String> words = main.readFromFile(Path.of(INPUT));
         main.showResult(words);
 

@@ -1,8 +1,14 @@
+package exercise3;
+
+import exercise3.MyInterface;
+import exercise3.Private;
+import exercise3.Public;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
 
-public class SecondClassImpl implements MyInterface{
+public class SecondClassImpl implements MyInterface {
     @Private
     @Public
     @Override
