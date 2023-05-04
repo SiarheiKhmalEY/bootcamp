@@ -2,7 +2,7 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 import java.util.*;
 
-public class Main {
+public class Exercise3 {
     public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
         List<MyInterface> myObjectsToScan = new ArrayList<>();
         myObjectsToScan.add(new FirstClassImpl());
@@ -14,7 +14,7 @@ public class Main {
         customAnnotationList.add(Private.class);
         customAnnotationList.add(Public.class);
 
-        Main main = new Main();
+        Exercise3 main = new Main();
 
         main.getAllClassesWithAnnotation(ScanMe.class, myObjectsToScan);
 
