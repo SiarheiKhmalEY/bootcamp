@@ -34,3 +34,16 @@ out/
 *.iml
 *.ipr
 *.iws
+
+# Node artifact files
+node_modules/
+dist/
+
+# Compiled Java class files
+*.class
+
+# Log files
+*.log
+
+# Package files
+*.jar
